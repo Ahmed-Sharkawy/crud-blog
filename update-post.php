@@ -37,4 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['errors'] = $errors;
     header("location: edit-post.php?id=$id");
   }
+} else {
+  header("location: index.php");
 }

@@ -2,6 +2,11 @@
 require('inc/connection.php');
 require('inc/header.php');
 require('inc/navbar.php');
+
+if ($_SESSION['isLogin'] == false) {
+    header('location: login.php');
+    exit();
+}
 ?>
 
 <div class="container-fluid pt-4">

@@ -3,6 +3,11 @@ require('inc/connection.php');
 require('inc/header.php');
 require('inc/navbar.php');
 
+if ($_SESSION['isLogin'] == false) {
+    header('location: login.php');
+    exit();
+}
+
 if (isset($_GET['id'])) {
     $git_id = $_GET['id'];
 }else {

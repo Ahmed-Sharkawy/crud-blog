@@ -1,6 +1,10 @@
 <?php
 require('inc/connection.php');
 
+if ($_SESSION['isLogin'] == false) {
+  header('location: login.php');
+  exit();
+}
 
 if (isset($_GET['id'])) {
 

@@ -3,11 +3,17 @@ require('inc/connection.php');
 require('inc/header.php');
 require('inc/navbar.php');
 
+if ($_SESSION['isLogin'] == false) {
+    header('location: login.php');
+    exit();
+}
+
 if (isset($_GET['id'])) {
     $id_get = $_GET['id'];
 } else {
     header('location: index.php');
 }
+
 $query  = "SELECT title, body FROM `posts` WHERE id = $id_get ";
 $result = $con->query($query);
 if ($result) {

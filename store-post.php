@@ -38,4 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['errors'] = $errors;
     header('location: create-post.php');
   }
+}else {
+  header('location: index.php');
 }
