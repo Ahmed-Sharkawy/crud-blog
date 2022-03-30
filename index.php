@@ -38,7 +38,6 @@ if ($result->num_rows > 0) {
                 <tbody>
                     <?php foreach ($result as  $value) : ?>
                         <tr>
-
                             <td><?= $value['title'] ?></td>
                             <td><?= $value['created_at'] ?></td>
                             <td>
@@ -46,7 +45,6 @@ if ($result->num_rows > 0) {
                                 <a href="edit-post.php?id=<?= $value['id'] ?>" class="btn btn-sm btn-secondary">Edit</a>
                                 <a href="delete-post.php?id=<?= $value['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('do you really want to delete post?')">Delete</a>
                             </td>
-
                         </tr>
                     <?php endforeach ?>
                 </tbody>

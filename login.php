@@ -1,5 +1,13 @@
-<?php require('inc/connection.php'); ?>
-<?php require('inc/header.php'); ?>
+<?php
+require('inc/connection.php');
+require('inc/header.php');
+
+if ($_SESSION['isLogin']) {
+    header('location: index.php');
+    exit();
+}
+
+?>
 
 <div class="container-fluid pt-4">
     <div class="row">
